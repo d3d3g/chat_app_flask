@@ -81,10 +81,3 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()  # Создание базы данных
     socketio.run(app) #http://127.0.0.1:5000/    
-
-
-# def goo():
-#     @socketio.on('message')
-#     def handle_message_main():
-#         print(f'Received message from AAA: bbb')
-#         emit('message', f'AAA: bbb', broadcast=True)
