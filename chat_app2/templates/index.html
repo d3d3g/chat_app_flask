@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Chat Application    User:{{username}}</h1>
+    {% for m in allmes %}
+    <ul class="allmsg">{{m.author}}: {{m.mess}}</ul>
+    {% endfor %}
+    <ul id="messages"></ul>
+    <form id="form" action="">
+        <input id="input" autocomplete="off" placeholder="Type a message..." />
+        <button id="send">Send</button>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='script2.js') }}"></script>
+{% endblock %}
